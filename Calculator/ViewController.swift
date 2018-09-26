@@ -13,9 +13,45 @@ class ViewController: UIViewController {
     var enteredNumber:Double=0;
     var mathOperations = false
     var operation = 0;
+    var hasDecimal:Bool = false
+
     
     
     @IBOutlet var ResultsLabel: UILabel!
+    @IBAction func decimalPoint(_ sender: UIButton) {
+        //starts here
+        /*
+        if(ResultsLabel.text == "0") {
+            
+            if(sender.tag != -1) {
+                ResultsLabel.text = ""
+                
+            }
+            else {
+                if(hasDecimal) {
+                    ResultsLabel.text = "0"
+                }
+            }
+            
+        }
+        
+        */
+        
+        if(sender.tag == 19) {
+            if(!hasDecimal) {
+                ResultsLabel.text?.append(".")
+                hasDecimal = true
+            }
+        }
+        else {
+            ResultsLabel.text?.append(String(sender.tag-1))
+        }
+        
+        
+        //ends here
+        
+        
+    }
     @IBAction func CalcNumbers(_ sender: UIButton)
     {
         
@@ -31,6 +67,7 @@ class ViewController: UIViewController {
             numberDispalayed=Double (ResultsLabel.text!)!
             
         }
+    
         
     }
     
@@ -100,13 +137,25 @@ class ViewController: UIViewController {
         }
 
         }
-        
+        else if sender.tag == 19
+        {
+            //starts here
+           
+            
+            //ends here
+            
+            
+            
+    
+            
+        }
         else if sender.tag == 18
         {
             ResultsLabel.text = "";
             numberDispalayed = 0;
             enteredNumber = 0;
             operation = 0;
+            hasDecimal = false
         }
     }
     override func viewDidLoad() {
