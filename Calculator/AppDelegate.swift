@@ -1,10 +1,14 @@
-//
 //  AppDelegate.swift
 //  Calculator
-//
 //  Created by Sherlyn Lobo on 2018-09-25.
 //  Copyright © 2018 Sherlyn Lobo. All rights reserved.
-//
+
+//  File Name       : ViewController.swift
+//  Author Name     : Sherlyn Lobo
+//  Student ID      : 301013071
+//  Date            : 26-09-2018 (DD/MM/YYYY)
+//  App Description : Simple Calculator
+//  Version 1.3
 
 import UIKit
 

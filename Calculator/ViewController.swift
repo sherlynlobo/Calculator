@@ -1,13 +1,17 @@
-//
 //  ViewController.swift
 //  Calculator
-//
 //  Created by Sherlyn Lobo on 2018-09-25.
 //  Copyright © 2018 Sherlyn Lobo. All rights reserved.
-//
+
+//  File Name       : ViewController.swift
+//  Author Name     : Sherlyn Lobo
+//  Student ID      : 301013071
+//  Date            : 26-09-2018 (DD/MM/YYYY)
+//  App Description : Simple Calculator
+//  Version 1.4
 
 import UIKit
-
+//View Controller class
 class ViewController: UIViewController {
     var numberDispalayed:Double=0;
     var enteredNumber:Double=0;
@@ -17,25 +21,10 @@ class ViewController: UIViewController {
 
     
     
-    @IBOutlet var ResultsLabel: UILabel!
-    @IBAction func decimalPoint(_ sender: UIButton) {
+    @IBOutlet var ResultsLabel: UILabel!  // For display Screen
+    @IBAction func decimalPoint(_ sender: UIButton) { // For Decimal Point
         //starts here
-        /*
-        if(ResultsLabel.text == "0") {
-            
-            if(sender.tag != -1) {
-                ResultsLabel.text = ""
-                
-            }
-            else {
-                if(hasDecimal) {
-                    ResultsLabel.text = "0"
-                }
-            }
-            
-        }
-        
-        */
+
         
         if(sender.tag == 19) {
             if(!hasDecimal) {
@@ -52,7 +41,7 @@ class ViewController: UIViewController {
         
         
     }
-    @IBAction func CalcNumbers(_ sender: UIButton)
+    @IBAction func CalcNumbers(_ sender: UIButton) // Numeric Values
     {
         
         if mathOperations == true
@@ -72,7 +61,7 @@ class ViewController: UIViewController {
     }
     
 
-    @IBAction func CalcButtons(_ sender: UIButton)
+    @IBAction func CalcButtons(_ sender: UIButton) // Operations
     {
         if ResultsLabel.text != "" && sender.tag != 18 && sender.tag != 11 && mathOperations == false
         {
@@ -104,28 +93,29 @@ class ViewController: UIViewController {
             }
             operation = sender.tag
             mathOperations = true;
+            hasDecimal = false
             
         }
         else if sender.tag == 11
         {
-            if operation == 15
+            if operation == 15    // For Division
             {
                 ResultsLabel.text = String(enteredNumber / numberDispalayed)
             }
         
-            else if operation == 14
+            else if operation == 14   // For Multiplication
         {
             
             ResultsLabel.text = String(enteredNumber * numberDispalayed)
         }
         
-           else if operation == 13
+           else if operation == 13 // For Subtraction
         {
             
             ResultsLabel.text = String(enteredNumber - numberDispalayed)
         }
         
-            else if operation == 12
+            else if operation == 12 // For Addition
         {
             
             ResultsLabel.text = String(enteredNumber + numberDispalayed)
@@ -137,19 +127,8 @@ class ViewController: UIViewController {
         }
 
         }
-        else if sender.tag == 19
-        {
-            //starts here
-           
-            
-            //ends here
-            
-            
-            
-    
-            
-        }
-        else if sender.tag == 18
+
+        else if sender.tag == 18   // For AC Button (Reset)
         {
             ResultsLabel.text = "";
             numberDispalayed = 0;
