@@ -18,32 +18,52 @@ class ViewController: UIViewController {
     var mathOperations = false
     var operation = 0;
     var hasDecimal:Bool = false
+    
 
     
     
     @IBOutlet var ResultsLabel: UILabel!  // For display Screen
+    @IBAction func CancelButton(_ sender: UIButton) { //For Backspace (Cancel Button)
+        if sender.tag == 17
+        {
+            if (ResultsLabel.text!).count > 0
+            {
+                let characters = Array(ResultsLabel.text!)
+                
+                ResultsLabel.text = String((characters.dropLast()))
+                if ResultsLabel.text!.isEmpty
+                {
+                    mathOperations = false
+                }
+            }
+            
+        }
+        
+        
+        
+        
+    }
     @IBAction func decimalPoint(_ sender: UIButton) { // For Decimal Point
-        //starts here
 
         
-        if(sender.tag == 19) {
-            if(!hasDecimal) {
+        if(sender.tag == 19)
+        {
+            if(!hasDecimal)
+            {
                 ResultsLabel.text?.append(".")
                 hasDecimal = true
             }
         }
         else {
             ResultsLabel.text?.append(String(sender.tag-1))
-        }
+            }
         
-        
-        //ends here
-        
+    
         
     }
     @IBAction func CalcNumbers(_ sender: UIButton) // Numeric Values
     {
-        
+
         if mathOperations == true
         {
             ResultsLabel.text = String(sender.tag-1)
@@ -56,8 +76,7 @@ class ViewController: UIViewController {
             numberDispalayed=Double (ResultsLabel.text!)!
             
         }
-    
-        
+
     }
     
 
@@ -66,7 +85,8 @@ class ViewController: UIViewController {
         if ResultsLabel.text != "" && sender.tag != 18 && sender.tag != 11 && mathOperations == false
         {
             enteredNumber=Double(ResultsLabel.text!)!
-            if sender.tag == 15 //divide
+            
+             if sender.tag == 15 //divide
             {
                 ResultsLabel.text = "/";
 
@@ -91,6 +111,7 @@ class ViewController: UIViewController {
                 ResultsLabel.text = "%";
 
             }
+
             operation = sender.tag
             mathOperations = true;
             hasDecimal = false
@@ -121,10 +142,12 @@ class ViewController: UIViewController {
             ResultsLabel.text = String(enteredNumber + numberDispalayed)
         }
         
-            else if operation == 16
-        {
-           // ResultsLabel.text = String(enteredNumber % numberDispalayed)
-        }
+            else if operation == 16   //For Percentage
+            {
+                enteredNumber = enteredNumber/100.0
+                ResultsLabel.text = String(enteredNumber)
+                hasDecimal = false
+            }
 
         }
 

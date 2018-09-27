@@ -195,7 +195,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlY-c2-sh6"/>
+                                    <action selector="CancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqx-cU-Cel"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-Bn-oyW">
