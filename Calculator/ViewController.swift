@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             }
         }
         else {
-            ResultsLabel.text?.append(String(sender.tag-1))
+            ResultsLabel.text?.append(String(sender.tag-1)) 
             }
         
     
