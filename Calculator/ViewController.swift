@@ -21,8 +21,49 @@ class ViewController: UIViewController {
     
 
     
+    @IBOutlet var ResultsLabel: UILabel!
     
-    @IBOutlet var ResultsLabel: UILabel!  // For display Screen
+    
+    @IBOutlet var TextFields: [UIButton]!
+    
+    @IBAction func changeText(_ sender: UIBarButtonItem) {   //change button text
+        
+        let alertController1 =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+        let alertAction3 = UIAlertAction(title: "Black", style: .default) { (alert) in
+            
+            UIView.animate(withDuration: 1, animations: {
+                
+                // textChange
+                for aTextField in self.TextFields{
+                    aTextField.setTitleColor(UIColor.black, for: .normal)
+                }
+            }, completion: nil)
+        }
+        
+        let alertAction4 = UIAlertAction(title: "Gray", style: .default) { (alert) in
+            UIView.animate(withDuration: 1, animations: {
+                // textChange
+                for aTextField in self.TextFields{
+                    aTextField.setTitleColor(UIColor.lightGray, for: .normal)
+                }
+            }, completion: nil)
+        }
+        
+        alertController1.addAction(alertAction3)
+        alertController1.addAction(alertAction4)
+        // function
+        present(alertController1, animated: true, completion: nil)
+
+        
+    }
+    
+    @IBAction func changeBackground(_ sender: UIBarButtonItem) { //Change background color
+        
+      
+        
+    }
+    
+    
     @IBAction func CancelButton(_ sender: UIButton) { //For Backspace (Cancel Button)
         if sender.tag == 17
         {
