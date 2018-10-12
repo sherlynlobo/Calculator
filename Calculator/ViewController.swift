@@ -59,7 +59,31 @@ class ViewController: UIViewController {
     
     @IBAction func changeBackground(_ sender: UIBarButtonItem) { //Change background color
         
-      
+        let alertController =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
+        let alertAction1 = UIAlertAction(title: "Light", style: .default) { (alert) in
+            
+            UIView.animate(withDuration: 1, animations: {
+                //self.turnLight.backgroundColor = UIColor.gray
+                self.view.backgroundColor = UIColor.init(red: 255, green: 255, blue: 0, alpha: 90)
+                // background for buttons
+                
+                
+            }, completion: nil)
+        }
+        
+        let alertAction2 = UIAlertAction(title: "Dark", style: .default) { (alert) in
+            UIView.animate(withDuration: 1, animations: {
+                // change background for top numbers
+                
+                
+                self.view.backgroundColor = UIColor.gray
+            }, completion: nil)
+        }
+        
+        alertController.addAction(alertAction1)
+        alertController.addAction(alertAction2)
+        // function
+        present(alertController, animated: true, completion: nil)
         
     }
     
