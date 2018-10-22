@@ -213,6 +213,8 @@ class ViewController: UIViewController {
                 ResultsLabel.text = String(enteredNumber)
                 hasDecimal = false
             }
+            mathOperations = true;
+            hasDecimal = false
 
         }
 

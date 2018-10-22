@@ -337,6 +337,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Bp6-EY-aPG"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="6Jb-5h-fcQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amy-iL-N3m">
@@ -388,6 +389,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="hNX-Tw-cuZ"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Eti-cQ-AMQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfw-BI-1og">
@@ -439,6 +441,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="ji9-De-J7c"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="sAh-YH-kKf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtY-W0-H47">
@@ -490,6 +493,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Djt-Ke-scA"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="fOV-PF-JfU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-VQ-2nq">
@@ -522,6 +526,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="wcf-bg-CFR"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="LzZ-5I-ZRq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOY-XD-8Yb">
@@ -618,7 +623,7 @@
         <!--Options-->
         <scene sceneID="wMi-sz-sNE">
             <objects>
-                <viewController id="vRt-LU-z0q" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vRt-LU-z0q" customClass="Options" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jaU-Sn-dlz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,26 +635,392 @@
                                     <navigationItem title="Calculator" id="tjE-7h-mVw">
                                         <barButtonItem key="leftBarButtonItem" title="Text" id="Vxk-fK-HDB">
                                             <connections>
-                                                <action selector="changeText:" destination="BYZ-38-t0r" id="QSo-jK-hoo"/>
+                                                <action selector="changeText:" destination="vRt-LU-z0q" id="nJm-wA-HUH"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="   Background" id="Spd-24-Pve">
                                             <connections>
-                                                <action selector="changeBackground:" destination="BYZ-38-t0r" id="GiL-9F-PWq"/>
+                                                <action selector="changeBackground:" destination="vRt-LU-z0q" id="h8R-Fo-osn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-uY-ubs">
+                                <rect key="frame" x="0.0" y="359" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="BcO-1y-icF"/>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Pe0-iO-h5T"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="ZG5-Gg-Ub8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP3-5g-zOV">
+                                <rect key="frame" x="62" y="359" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="Ngy-PV-dkg"/>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="zet-cm-oTC"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="zvZ-QS-gPl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15X-5p-ikX">
+                                <rect key="frame" x="120" y="359" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="2Qo-6A-TXn"/>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="GiM-uZ-BRT"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="xBq-i3-fGx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFP-1Y-1wi">
+                                <rect key="frame" x="182" y="359" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Sna-pj-Bwq"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="YzK-p6-rA2"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="SvO-xu-a3W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-8m-c3n">
+                                <rect key="frame" x="0.0" y="279" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Am3-Wl-Up8"/>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="dO7-jO-eOx"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="xit-fS-jaE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqa-Yr-XwE">
+                                <rect key="frame" x="62" y="279" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Ckf-rL-y8l"/>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="lOt-EV-5fh"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="CfJ-dd-J77"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzP-k8-kuA">
+                                <rect key="frame" x="120" y="279" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="DdS-cZ-hZf"/>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="GZc-Dy-Ap3"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="NEn-V9-YNl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyH-rS-GPC">
+                                <rect key="frame" x="182" y="279" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="PJ6-l4-n0I"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="nOJ-OW-ZfJ"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="PDe-oy-6tT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFK-Dm-BGm">
+                                <rect key="frame" x="0.0" y="201" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="AQe-3I-QdM"/>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="ue7-JP-tQA"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="zp1-El-oJp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Cc-u2i">
+                                <rect key="frame" x="62" y="201" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="5IK-Uv-tJb"/>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="5XS-d7-iys"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="fyI-iV-e6U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN4-tY-QTh">
+                                <rect key="frame" x="120" y="201" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="2eV-fP-rsg"/>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Dhj-83-7oq"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="kO0-7L-77E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K0-KH-a6v">
+                                <rect key="frame" x="182" y="201" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="*">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="IQe-hx-G5h"/>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="OVk-g5-ZvC"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="fCO-mx-aJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-xl-Wwc">
+                                <rect key="frame" x="0.0" y="123" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="KVT-bj-0ta"/>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Nqf-M0-EUa"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="rs1-W5-aJL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-SJ-2CM">
+                                <rect key="frame" x="62" y="123" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelButton:" destination="X8g-qP-WS3" eventType="touchUpInside" id="D0n-Y8-JEI"/>
+                                    <action selector="CancelButton:" destination="vRt-LU-z0q" eventType="touchUpInside" id="ejt-6u-DMJ"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="zwz-a6-q4t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lle-oz-eqR">
+                                <rect key="frame" x="120" y="123" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="J9X-9M-IYA"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="YaV-G4-YZX"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="Y8L-QJ-AqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="829-0K-Omh">
+                                <rect key="frame" x="182" y="123" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="/">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="hey-t5-V4m"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="rOa-Qm-9r7"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="9e3-oc-gFM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG3-WK-mHx">
+                                <rect key="frame" x="0.0" y="439" width="126" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcNumbers:" destination="vRt-LU-z0q" eventType="touchUpInside" id="DOz-If-J6y"/>
+                                    <action selector="CalcNumbers:" destination="X8g-qP-WS3" eventType="touchUpInside" id="fYZ-mM-34L"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="RCi-z2-cgb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWi-PN-oeW">
+                                <rect key="frame" x="182" y="439" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="IRr-tv-eix"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="ukL-Ty-6lx"/>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="d6a-Mz-4ub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDD-ps-2NC">
+                                <rect key="frame" x="240" y="123" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="sin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hu-35-KqF"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="S4B-ZJ-qUL"/>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="m6K-tO-wXk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="602-j7-JGh">
+                                <rect key="frame" x="240" y="201" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="cos">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="JLA-WX-Qsd"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="N98-ih-tnf"/>
+                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOh-MU-Ppr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-Kl-2fd">
+                                <rect key="frame" x="240" y="281" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="tan">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="8zw-ny-ckN"/>
+                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNH-7N-qi5"/>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="cPb-Ae-uju"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaT-iU-dqR">
+                                <rect key="frame" x="240" y="359" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="x^2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="8Iu-bb-kKd"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="nHF-KN-2fL"/>
+                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJd-nn-ivD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-Pz-PCO">
+                                <rect key="frame" x="240" y="439" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="x^3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CalcButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYF-e4-FJQ"/>
+                                    <action selector="CalcButtons:" destination="X8g-qP-WS3" eventType="touchUpInside" id="bid-8A-Ip9"/>
+                                    <action selector="CalcButtons:" destination="vRt-LU-z0q" eventType="touchUpInside" id="jw9-sR-7w4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-c5-M7L">
+                                <rect key="frame" x="120" y="439" width="64" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TextFields:" destination="X8g-qP-WS3" eventType="touchUpInside" id="6TV-9J-K63"/>
+                                    <action selector="TextFields:" destination="vRt-LU-z0q" eventType="touchUpInside" id="iF7-o1-Kxz"/>
+                                    <action selector="decimalPoint:" destination="X8g-qP-WS3" eventType="touchUpInside" id="3DA-qf-n7R"/>
+                                    <action selector="decimalPoint:" destination="vRt-LU-z0q" eventType="touchUpInside" id="P8D-QZ-SQd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK6-ed-0Re">
+                                <rect key="frame" x="0.0" y="64" width="320" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DDP-cP-B7C"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" id="BDu-LX-ahZ"/>
+                    <connections>
+                        <outlet property="ResultsLabel" destination="VK6-ed-0Re" id="MVG-vg-IZB"/>
+                        <outletCollection property="TextFields" destination="u0w-xl-Wwc" collectionClass="NSMutableArray" id="N9x-wY-v7Y"/>
+                        <outletCollection property="TextFields" destination="ajZ-SJ-2CM" collectionClass="NSMutableArray" id="8tZ-WW-m3t"/>
+                        <outletCollection property="TextFields" destination="Lle-oz-eqR" collectionClass="NSMutableArray" id="Nae-cG-mNv"/>
+                        <outletCollection property="TextFields" destination="829-0K-Omh" collectionClass="NSMutableArray" id="0cV-aO-ztD"/>
+                        <outletCollection property="TextFields" destination="OFK-Dm-BGm" collectionClass="NSMutableArray" id="FPd-rz-E9J"/>
+                        <outletCollection property="TextFields" destination="3A5-Cc-u2i" collectionClass="NSMutableArray" id="x9R-7D-tkv"/>
+                        <outletCollection property="TextFields" destination="CN4-tY-QTh" collectionClass="NSMutableArray" id="kia-pP-EwA"/>
+                        <outletCollection property="TextFields" destination="3K0-KH-a6v" collectionClass="NSMutableArray" id="1Wr-lq-eoG"/>
+                        <outletCollection property="TextFields" destination="Lg0-8m-c3n" collectionClass="NSMutableArray" id="fxr-IG-ar6"/>
+                        <outletCollection property="TextFields" destination="Gqa-Yr-XwE" collectionClass="NSMutableArray" id="lKS-cW-gzz"/>
+                        <outletCollection property="TextFields" destination="rzP-k8-kuA" collectionClass="NSMutableArray" id="AkM-uM-fm3"/>
+                        <outletCollection property="TextFields" destination="iyH-rS-GPC" collectionClass="NSMutableArray" id="hse-OU-gVh"/>
+                        <outletCollection property="TextFields" destination="hOp-uY-ubs" collectionClass="NSMutableArray" id="FR3-ae-gVA"/>
+                        <outletCollection property="TextFields" destination="ZP3-5g-zOV" collectionClass="NSMutableArray" id="fOa-EO-Q94"/>
+                        <outletCollection property="TextFields" destination="15X-5p-ikX" collectionClass="NSMutableArray" id="db1-rj-feM"/>
+                        <outletCollection property="TextFields" destination="jFP-1Y-1wi" collectionClass="NSMutableArray" id="3ce-Gv-g06"/>
+                        <outletCollection property="TextFields" destination="AG3-WK-mHx" collectionClass="NSMutableArray" id="kSh-Sd-btm"/>
+                        <outletCollection property="TextFields" destination="8sE-c5-M7L" collectionClass="NSMutableArray" id="d90-cE-54z"/>
+                        <outletCollection property="TextFields" destination="nWi-PN-oeW" collectionClass="NSMutableArray" id="hLC-o9-4SZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BW4-iL-lOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="1594"/>
+            <point key="canvasLocation" x="1280.625" y="1592.9577464788733"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rFf-5q-ykA">
