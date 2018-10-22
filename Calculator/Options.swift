@@ -205,11 +205,11 @@ class Options: UIViewController {
                 
             else if sender.tag == 23 //x^2
             {
-                ResultsLabel.text = "x^2";
+                ResultsLabel.text = String(pow(enteredNumber,2));
             }
             else if sender.tag == 24 //x^3
             {
-                ResultsLabel.text = "x^3";
+                ResultsLabel.text = String(pow(enteredNumber,3));
             }
             operation = sender.tag
             mathOperations = true;
@@ -253,8 +253,6 @@ class Options: UIViewController {
                 
                 enteredNumber = sin(enteredNumber)
                 ResultsLabel.text = String(enteredNumber)
-                print("Reached sin")
-                
             }
                 
             else if operation == 21 // for cos button
@@ -262,8 +260,6 @@ class Options: UIViewController {
                 
                 enteredNumber = cos(enteredNumber)
                 ResultsLabel.text = String(enteredNumber)
-                print("Reached in cos")
-                
             }
                 
             else if operation == 22 // for tan button
@@ -271,8 +267,6 @@ class Options: UIViewController {
                 
                 enteredNumber = tan(enteredNumber)
                 ResultsLabel.text = String(enteredNumber)
-                print("Reached tan")
-                
             }
                 
             else if operation == 23 // for x^2 button
@@ -280,16 +274,12 @@ class Options: UIViewController {
                 
                 enteredNumber = pow(enteredNumber,2)
                 ResultsLabel.text = String(enteredNumber)
-                print("Reached x^2")
-                
             }
             else if operation == 24 // for x^3 button
             {
                 
                 enteredNumber = pow(enteredNumber,3)
-                ResultsLabel.text = String(enteredNumber)
-                print("Reached x^3")
-                
+                ResultsLabel.text = String(enteredNumber)                
             }
             mathOperations = true;
             hasDecimal = false
